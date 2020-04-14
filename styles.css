@@ -1,32 +1,61 @@
-.body{
-    background-color: blue;
+html{
+    cursor: url('/assets/scope.png'), auto;
+    
 }
 
 
-/* Common formula for sticky nav bar */
-.sticky{
-    position: fixed;
-    top:0;
-    width:100%
+body{
+    margin: auto 0;
+    background: url(./assets/background4.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-/* NAV */
+.text-zone{
+    font-size: 1em;
+    /* background-color: #a80004; */
+    background-color: #808080;
+    border-radius: 2%;
+    border: 20px, solid, blue;
+    /* color:#bbbb00; */
+    color:#ffffff;
+    font-family: 'Special Elite', cursive;
+
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+
+}
+
+
 .main-nav{
-    display: flex;
+    display:flex;
+    padding:0;
     list-style: none;
-    font-size: 0.7em;
-    margin: 0;
+    justify-content: flex-end;
+  
 }
-
-
 
 /* Media Query- USE THESE PROPERTIES WHEN MAX WIDTH = 600 PX */
-@media only screen and (max-width:600px){
+@media only screen and (max-width:500px){
     .main-nav{
-        font-size: 0.5em;
+        font-size: 0.4em;
         padding: 0;
     }
 }
+
 .push{
-    margin-left: auto;
+    margin-right: auto;
+}
+
+li{
+    padding:.5em;
+}
+
+li:hover{
+   font-weight: bold;
+    color: red;
 }
