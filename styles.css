@@ -42,7 +42,7 @@ body{
 /* Media Query- USE THESE PROPERTIES WHEN MAX WIDTH = 600 PX */
 @media only screen and (max-width:500px){
     .main-nav{
-        font-size: 0.4em;
+        font-size: 0.6em;
         padding: 0;
     }
 }
