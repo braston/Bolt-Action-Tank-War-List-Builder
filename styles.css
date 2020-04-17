@@ -1,8 +1,7 @@
 html{
-    cursor: url('/assets/scope.png'), auto;
+    /* cursor: url('/assets/scope.png'), auto; */
     
 }
-
 
 body{
     margin: auto 0;
@@ -16,7 +15,9 @@ body{
 .text-zone{
     font-size: 1em;
     /* background-color: #a80004; */
-    background-color: #808080;
+    /* background-color: #808080; */
+
+    background-color: rgba(128,128,128,0.25);
     border-radius: 2%;
     border: 20px, solid, blue;
     /* color:#bbbb00; */
@@ -30,32 +31,147 @@ body{
 
 }
 
-
 .main-nav{
     display:flex;
     padding:0;
     list-style: none;
     justify-content: flex-end;
-  
-}
-
-/* Media Query- USE THESE PROPERTIES WHEN MAX WIDTH = 600 PX */
-@media only screen and (max-width:500px){
-    .main-nav{
-        font-size: 0.6em;
-        padding: 0;
-    }
 }
 
 .push{
     margin-right: auto;
 }
 
+.app-cover{
+    padding:1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:rgb(255, 255, 255);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* Next 3 items cover app content CSS Grid styling */
+.container{
+    width:90%;
+    display:grid;
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.container-item{
+    margin: 0.1rem;
+    padding: 0.25rem;
+    font-size: 1em;
+    background-color: rgba(128,128,128,0.25);
+    border-radius: 2%;
+    text-align: start;
+    /* border: .1rem solid #332f2f; */
+    border: .1rem solid #c2c0c0;
+    /* color:rgb(255, 205, 39); */
+    color:rgb(204, 204, 204);
+    font-family: 'Special Elite', cursive;
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.container-input{
+    width:60%;
+}
+
+/* Media Query- USE THESE PROPERTIES WHEN MAX WIDTH = 600 PX */
+@media only screen and (max-width:450px){
+    /* .container-item{
+        font-size: 0.75em;
+        padding: 0;
+    } */
+    .main-nav{
+        font-size: 0.6em;
+        padding: 0;
+    }
+    .app-cover{
+        font-size: 0.8em;
+        padding: 0;
+    }
+
+}
+
+
+
+.span{
+    grid-column: 1/3;
+    text-align: center;  
+}
+
+.info-button{
+    border-radius:75%;
+}
+.info-button:hover{
+    color:red;
+}
+
+.focus-grid{
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: left;
+}
+
+.focus-grid > div{
+    color:red;
+}
+
+@media only screen and (max-width:400px){
+    .focus-grid > div{
+        font-size: 0.6em;
+        padding: 0;
+        color:yellow;
+    }
+}
+
+
 li{
     padding:.5em;
 }
 
 li:hover{
-   font-weight: bold;
-    color: red;
+    color: #f9ffa6;
+    font-size: 1.05em;
+
+}
+
+
+
+.grid-wrapper{
+    display:grid;
+    gap:10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.box > img{
+    /* Each box with an image in it sizes to 100% of container space */
+    width:100%;
+    height:100%;
+}
+
+.box{
+    background-color: rgba(128,128,128,0.5);
+    padding:15px;
+    margin:20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.box:hover {
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+    -o-transform:scale(1.1,1.1);
+    transform:scale(1.1,1.1);
+    color: #f9ffa6;
+    font-size: 1.05em;
 }

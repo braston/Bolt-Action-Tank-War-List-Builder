@@ -18,13 +18,52 @@
                 <li>About</li>
             </ul>
         </nav>
-    </div class="app-cover">
-    <div>
-       
     </div>
-    <div class="container text-zone">
-       
+    <div class="app-cover text-zone">
+  Welcome to the Bolt Action: Tank War Army Generator
+   <div class="container">
+    <div class="container-item">Nation:</div>
+    <div class="container-item">
+        <select class="container-input" id="army">
+            <option value="us">United States</option>
+            <option value="germany">Germany</option>
+            <option value="soviet">Soviet Union</option>
+            <option value="britain">Great Britain</option>
+            <option value="japan">Japan</option>
+            <option value="italy">Italy</option>
+        </select>
+
     </div>
+    <div class="container-item">Point Target:</div>
+    <div class="container-item">
+        <input class="container-input" type="text" id="points">pts.
+    </div>
+    <div class="container-item span">Focus:</div>
+    <div class="container-item"><input type="radio" name="army-focus" value="balance">Balanced</div>
+    <div class="container-item"><input type="radio" name="army-focus" value="firepower">Firepower</div>
+    <div class="container-item"><input type="radio" name="army-focus" value="heavy">Heavy Armor</div>
+    <div class="container-item"><input type="radio" name="army-focus" value="mech">Mechanized</div>
+    <div class="container-item span">Special Options:</div>
+    <div class="container-item">Artillery:<input type="checkbox" id="include-art"></div>
+    <div class="container-item">Mechanized:<input type="checkbox" id="include-mech"></div>
+    <div class="container-item span"><button id="build">Build An Army!</button></div>
+
+<!-- End main content grid  -->
+</div>
+
+   </div>
+    </div>
+  
+<div class="grid-wrapper">
+    <div class="box">IS2<img src="/assets/IS2.jpg"></div>
+    <div class="box">T34/76<img src="/assets/Ts4_76.jpg"></div>
+    <div class="box">King Tiger<img src="/assets/KingTiger.jpg"></div>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+    </body>
+    </html>
+
 
 
 
