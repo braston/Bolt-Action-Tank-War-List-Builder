@@ -1,10 +1,10 @@
 //Wire in selectors
-var buildButton = document.getElementById("build");
-var pointTarget = document.getElementById("points");
-var selectedArmy = document.getElementById("army");
-var armyType = document.getElementsByName("army-focus");
-var optionArt = document.getElementById("include-art");
-var optionMech = document.getElementById("include-mech");
+const buildButton = document.getElementById("build");
+const pointTarget = document.getElementById("points");
+const selectedArmy = document.getElementById("army");
+const armyType = document.getElementsByName("army-focus");
+const optionArt = document.getElementById("include-art");
+const optionMech = document.getElementById("include-mech");
 
 //Global variables
 var army;
@@ -94,10 +94,9 @@ function armySelectionFormatter(){
 
 function validate(){
 
-    generateList();
+   // generateList();
 
     ///FORM VALIDATION - TEMPORARILY DISABLED
-    /*
     armySelectionFormatter();
     parseArmyType();
     parseOptions();
@@ -120,7 +119,7 @@ function validate(){
      }
      else{
          alert("Error: Enter Point Target!")
-     } */
+     }
 };
 
 /////////////////////////////////////////////////////////////////////////////
@@ -175,131 +174,12 @@ m8_scott.sp_rules = ["Open-topped"];
 var us_tanks = {m3a1_stuart, m36b1_jackson, m8_scott};
 
 
-function compare(first, second)
-{
-    //Returns true if first value is greater
-    if(first > second)
-    {return true;}
-    else{
-        return false;
-    }
-
-}
-
-function findLargest(numberArray){
-    index = 0;
-    current = numberArray[0];
-    for(i=1;i<numberArray.length;i++)
-    {
-        if(!compare(current, numberArray[i]))
-        {
-            //Item is not the largest
-            //Set as largest
-            current = numberArray[i];
-            console.log("Index value is: " + index);
-            index = i;
-        }
-    }
-
-numberArray.splice(index,1);
-return current;
-}
-
-function recursiveFindLargest(numberArray, sortedArray){
-    index = 0;
-    var changed = false;
-    current = numberArray[0];
-    for(i=0;i<numberArray.length;i++)
-    {
-        if(!compare(current, numberArray[i]))
-        {
-            //Item is not the largest
-            //Set as largest
-            current = numberArray[i];
-            index = i;
-            changed = true;
-        }
-    }
-if(changed){
-//Add new item
-sortedArray.push(current);
-//Remove old item
-numberArray.splice(index,1);
-recursiveFindLargest(numberArray, sortedArray);
-}
-return 0;
-}
-
-function recursiveSort(numberArray, iter){
-  
-//Start at 0
-var current = numberArray[0];
-change=false;
-var index = 0;
 
 
-for(var i=0;i<numberArray.length-iter;i++)
-{
-    if(current<numberArray[i])
-    {
-        //Next number is larger. Re-assign current and track index
-        current=numberArray[i]
-        index = i;
-        change=true;
-    }
-    }
 
-    if(change){
-        numberArray.splice(index,1);
-        numberArray.push(current)
-        iter++;
-        recursiveSort(numberArray, iter);
-    }
-
-    
-    else{
-    if(iter<numberArray.length)
-    {
-        current = numberArray[0];
-        numberArray.splice(0,1);
-        numberArray.push(current);
-        iter++;
-        recursiveSort(numberArray, iter);
-    }
-}
-  
-return 0;
-}
-
-function sortTanks(){
-
-//Iterative approach. Take first number. Compare to every other number.
-// If pass, put in structure. If fail, take new number, re-run comparison
-//Repeat
-
-//First sort on individual vars to prove the algorithm
-var first = 4468436;
-var second = 4532;
-var third = 764;
-var fourth = 843;
-var fifth = 1;
-
-
-var values = [first, second, third, fourth, fifth];
-var sorted = [];
-
-console.log("Original array is: " + values);
-recursiveSort(values, 0)
-console.log("Sorted Array is: " + values);
-
-}
 
 function generateList(){
-
-   // console.log("In Function- confirm tank access");
-    //console.log(m36b1_jackson);
-    sortTanks();
-
+alert('generating!');
 }
 
 
